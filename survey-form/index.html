@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>pantokrator4.survey-form</title>
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        
+        
+            <div class="container">
+      <h1 
+      id='title'>Survey Form by pantokrator4
+      </h1>
+      <p id='description'>Thank you for taking the time to help us improve the platform
+      </p>
+      <form id='survey-form'>
+        <fieldset>
+          <label id='name-label'>Name <input class="fieldss" id='name' type='text' required
+          placeholder='Alex'></label>
+        
+        <label id='email-label'> Email <input class="fieldss" id='email' type='email' placeholder='pantokrator4@gmail.com' required></label>
+
+        <label id='age'> Age <input class="fieldss" id='age' type='number' min='18' max='99' placeholder='18 years old' required></label>
+        </fieldset>
+        <fieldset>
+          <label>Which option best describes your current role?
+          <select id='dropdown'>
+            <option disabled selected value>choose</option>
+            <option>option 1</option>
+            <option>option 2</option>
+          </select>
+          </label>
+        </fieldset>
+        
+        <fieldset>Would you recommend freeCodeCamp to a friend?
+          <label>
+            <input type='radio' name='bottom' value='value1' checked> Sure
+          </label>
+
+          <label>
+            <input type='radio' name='bottom' value='value2'> Maybe
+          </label>
+
+        </fieldset>
+
+        <fieldset>What would you like to see improved?
+          <label><input type='checkbox' value='front'> Front-end Projects</label>
+          <label><input type='checkbox' value='back'> Back-end Projects</label>
+        </fieldset>
+
+        <fieldset>Any comments or suggestions?
+            <textarea placeholder='yes!' cols="25" rows="4"></textarea>
+        </fieldset>
+         <input class="button" id='submit' type='submit'>
+      
+      </form>
+      </div>
+      
+    </body>
+</html>
