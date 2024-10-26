@@ -3,16 +3,12 @@ body{
     background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg);
     
   }
-
   h1,p {
     text-align: center;
     padding-top: 0.6em;
     
   }
-  
-
-  
-  label{
+    label{
     display: block;
     margin: 0.8em 0;
     ;
@@ -21,11 +17,12 @@ body{
   }
 .container
 {
-    background-color: rgba(255,255,255,0.6);
+    background-color: hsla(0, 0%, 80%, 0.7);
     border-radius: 10px;
     margin: 2.5em auto;
     max-width: 500px;
     min-width: 400px;
+    box-shadow: 0 0 20px 0 black;
   
 }
 form {
@@ -49,29 +46,49 @@ textarea{
   
 }
 fieldset {
-  margin: auto 1em;
+  margin: -10px 1em 0;
   border-style:none;
 }
 input, textarea, select {
   background: linear-gradient(180deg, lightblue, lightgrey);
   border: none;
+  box-shadow: 0 0 20px 0;
+  border-radius: 5px;
   
   
 }
 
 textarea {
   margin: 10px 0;
+  font-family: Tahoma, sans-serif;
   
 }
 .fieldss {
   height: 25px;
   width: 180px;
-  display: flex;
-  margin-top: 5px;
+  display: block;
+  margin-top: 10px;
 }
 select {
   height: 27px;
   width: 182px;
-  display: flex;
-  margin-top: 5px;
+  margin-top: 13px;
+  
+  
+  
 }
+
+.radiob {
+  box-shadow: unset;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: cadetblue;
+}
+
+
+
