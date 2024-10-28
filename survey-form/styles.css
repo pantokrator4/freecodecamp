@@ -1,32 +1,43 @@
 body{
     font-family: Tahoma, sans-serif;
     background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg);
+    padding-top: 2em;
+    
     
   }
-  h1,p {
+  .main {
     text-align: center;
-    padding-top: 0.6em;
+    padding-top: 0.5em;
+    margin-top: -20px; 
+    margin-bottom: 20px;
     
-  }
+    
+  }  
+    
+  
     label{
     display: block;
-    margin: 0.8em 0;
-    ;
-
-
+    margin: 0.5em 0;
   }
+    
+  .inlineb {
+    display: inline;
+  }
+
+  
 .container
 {
     background-color: hsla(0, 0%, 80%, 0.7);
     border-radius: 10px;
     margin: 2.5em auto;
     max-width: 500px;
-    min-width: 400px;
+    min-width: 100px;
     box-shadow: 0 0 20px 0 black;
-  
+    
+    
 }
 form {
-    padding-bottom: 0.3em;
+    padding-bottom: 0.2em;
 }
 .button {
     width: 35%;
@@ -80,6 +91,8 @@ select {
 
 .radiob {
   box-shadow: unset;
+  
+  
 }
 a {
   color: black;
@@ -90,5 +103,28 @@ a:hover {
   color: cadetblue;
 }
 
+@media (max-width: 500px) {
+  .container {
+    width: 300px;
+    
+  }
+  label {
+    margin: 0.3em 1.5em;
+  }
+  textarea {
+    margin: 10px 1.5em;
+  }
+  .button {
+    width: 40%;
+    margin: 0 auto 1em;
+  }
+  p { margin: 0.3em 1.5em;
+
+  }
+  .inlineb {
+    display: block;
+  }
+  
+}
 
 

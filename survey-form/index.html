@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset='utf-8'>
     <title>pantokrator4.survey-form</title>
     <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
        <div class="container">
-          <h1 
-      id='title'>Survey Form by <a href="https://github.com/pantokrator4">pantokrator4</a>
+          <h1 class="main"
+      id='title'>Survey Form by <a target='_blank' href="https://github.com/pantokrator4">pantokrator4</a>
       </h1>
-      <p id='description'>Thank you for taking the time to help us improve the platform
+      <p class="main" id='description'>Thank you for taking the time to help us improve the platform
       </p>
       <form id='survey-form'>
         <fieldset>
@@ -28,21 +29,21 @@
           </select>
           </label>
         </fieldset>
-        <fieldset>Would you recommend freeCodeCamp to a friend?
-          <label>
+        <fieldset><p>Would you recommend freeCodeCamp to a friend?</p>
+          <label class="inlineb">
             <input class="radiob" type='radio' name='bottom' value='value1' checked> Sure
           </label>
 
-          <label>
+          <label class="inlineb">
             <input class="radiob" type='radio' name='bottom' value='value2'> Maybe
           </label>
 
         </fieldset>
-        <fieldset>What would you like to see improved?
-          <label><input class="radiob" type='checkbox' value='front'> Front-end Projects</label>
-          <label><input class="radiob" type='checkbox' value='back'> Back-end Projects</label>
+        <fieldset><p>What would you like to see improved?</p>
+          <label class="inlineb"><input class="radiob" type='checkbox' value='front'> Front-end Projects</label>
+          <label class="inlineb"><input class="radiob" type='checkbox' value='back'> Back-end Projects</label>
         </fieldset>
-        <fieldset>Any comments or suggestions?
+        <fieldset><p>Any comments or suggestions?</p>
             <textarea placeholder='max 88 symbols' cols="25" rows="4" maxlength="88"></textarea>
         </fieldset>
          <input class="button" id='submit' type='submit'>
