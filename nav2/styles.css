@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:wght@400&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: blanchedalmond;
+    font-family: "Playwrite GB S", 'sans-serif';
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-right: auto;
+    display: flex;
+    
+}
+.logo p {
+    margin-top: 27px;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 15px 30px;
+    background-color: rgba(205, 133, 63, 0.7);
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+}
+.container {
+    background-color: rgba(205, 133, 63, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+nav ul {
+    list-style: none;
+    margin-right: 50px;
+}
+nav ul li {
+    padding: 0 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+nav ul li:hover {
+    color: blanchedalmond
+}
+.main_img {
+    width:  500px;
+    height: 300px;
+    border-radius: 10px;
+}
+button {
+    background-color: blanchedalmond;
+    border-style: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: "Playwrite GB S", 'sans-serif';
+}
+button:hover {
+    background-color: rgba(205, 133, 63, 0.6);
+}
+
+@media (max-width:660px) {
+    .logo-p {
+        display: none;
+    }
+    nav ul li {
+        padding: 0 10px 0 0;
+        cursor: pointer;
+        display: block;
+    }
+    .main_img {
+        width:  300px;
+        height: 150px;
+    }
+        
+    
+    nav ul {
+        margin: auto;
+        padding: auto;
+    }
+    
+}
