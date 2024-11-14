@@ -98,6 +98,9 @@ const playSong = (id) => {
   userData.currentSong = song;
   playButton.classList.add("playing");
 
+  highlightCurrentSong();
+  setPlayerDisplay();
+  setPlayButtonAccessibleText();
   audio.play();
 };
 
@@ -129,7 +132,43 @@ const playPreviousSong = () => {
    }
 };
 
+const shuffle = () => {
+  userData?.songs.sort(() => Math.random() - 0.5);
+  userData.currentSong = null;
+  userData.songCurrentTime = 0;
 
+  renderSongs(userData?.songs);
+  pauseSong();
+  setPlayerDisplay();
+  setPlayButtonAccessibleText();
+};
+
+const deleteSong = (id) => {
+  
+};
+
+const setPlayerDisplay = () => {
+  const playingSong = document.getElementById("player-song-title");
+  const songArtist = document.getElementById("player-song-artist");
+  const currentTitle = userData?.currentSong?.title;
+  const currentArtist = userData?.currentSong?.artist;
+
+  playingSong.textContent = currentTitle ? currentTitle : "";
+  songArtist.textContent = currentArtist ? currentArtist : "";
+};
+
+const highlightCurrentSong = () => {
+  const playlistSongElements = document.querySelectorAll(".playlist-song");
+  const songToHighlight = document.getElementById(
+    `song-${userData?.currentSong?.id}`
+  );
+
+  playlistSongElements.forEach((songEl) => {
+    songEl.removeAttribute("aria-current");
+  });
+
+  if (songToHighlight) songToHighlight.setAttribute("aria-current", "true");
+};
 
 const renderSongs = (array) => {
   const songsHTML = array
@@ -153,6 +192,15 @@ const renderSongs = (array) => {
   playlistSongs.innerHTML = songsHTML;
 };
 
+const setPlayButtonAccessibleText = () => {
+  const song = userData?.currentSong || userData?.songs[0];
+
+  playButton.setAttribute(
+    "aria-label",
+    song?.title ? `Play ${song.title}` : "Play"
+  );
+};
+
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
 
 playButton.addEventListener("click", () => {
@@ -168,6 +216,8 @@ pauseButton.addEventListener("click",  pauseSong);
 nextButton.addEventListener("click", playNextSong);
 
 previousButton.addEventListener("click", playPreviousSong);
+
+shuffleButton.addEventListener("click", shuffle);
 
 const sortSongs = () => {
   userData?.songs.sort((a,b) => {
