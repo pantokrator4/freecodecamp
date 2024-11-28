@@ -1,3 +1,53 @@
 body {
-    background-color: #6ca19b;
+    background: linear-gradient(90deg, #eeaeca , #94bbe9 );
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+.container {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    width: 400px;
+    margin: 10% auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+details {
+    padding-bottom: 20px;
+}
+
+#text-input {
+    border-radius: 5px;
+    border-style: none;
+    height: 20px;
+}
+
+#check-btn {
+    margin-left: 3px;
+    border-radius: 5px;
+    border-style: none;
+    height: 23px;
+    width: 20%;
+}
+
+#check-btn:hover {
+    background-color: #eeaeca;
+    color: azure;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: azure
 }
